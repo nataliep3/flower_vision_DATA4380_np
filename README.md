@@ -81,7 +81,6 @@ Our best model — a Random Forest Classifier with class weighting and calibrate
 | Random Forest (basic)        | 81%      | 0.46     |
 | Random Forest (tuned attempt)| 81%      | 0.45     |
 
-- Precision/Recall were also tracked per class
 ---
 
 ### Conclusions
