@@ -13,7 +13,6 @@ The challenge is to build a binary classification model to predict whether a sof
 Our approach involved exploring and comparing several machine learning models including:
 - Logistic Regression (baseline)
 - Random Forest (primary model)
-- Threshold tuning
 - Class balancing
 - Feature transformation (log-scaling + standardization)
 
