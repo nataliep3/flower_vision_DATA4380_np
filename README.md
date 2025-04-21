@@ -119,3 +119,13 @@ To better understand the underlying structure and separability of the dataset, s
 - Explore feature engineering based on domain knowledge
 
 ---
+
+## How to reproduce results
+
+### Option 1: Reproduce full pipeline
+
+1. Clone this repository
+2. Install python packages, numpy, matplotlib, scikit-learn
+3. Run `Kaggle Tabular Data.ipynb` end-to-end
+4. Upload `submission.csv` to [Kaggle S3E23](https://www.kaggle.com/competitions/playground-series-s3e23)
+
