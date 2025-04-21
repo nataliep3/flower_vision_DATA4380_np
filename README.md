@@ -125,7 +125,7 @@ To better understand the underlying structure and separability of the dataset, s
 ### Option 1: Reproduce full pipeline
 
 1. Clone this repository
-2. Install python packages, numpy, matplotlib, scikit-learn
+2. Install Python packages, `numpy`, `matplotlib`, `scikit-learn`
 3. Run `Kaggle Tabular Data.ipynb` end-to-end
 4. Upload `submission.csv` to [Kaggle S3E23](https://www.kaggle.com/competitions/playground-series-s3e23)
 
