@@ -40,7 +40,7 @@ My best model — a Random Forest Classifier with class weighting and calibrated
 - Dropped clearly uninformative or noisy features (`locCodeAndComment`, `IOBlank`, `id`, etc.)
 - Applied `np.log1p()` to reduce skewness
 - Standardized features using `StandardScaler`
-- Handled class imbalance using `class_weight='balanced'` and threshold tuning
+- Handled class imbalance using `class_weight='balanced'`
 
 #### Data Visualization
 
