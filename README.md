@@ -85,7 +85,9 @@ My best model — a Random Forest Classifier with class weighting and calibrated
 ### Conclusions
 
 - Random Forests performed best with minimal tuning
-- Preprocessing (log-scaling and feature selection) made a large impact
+- Preprocessing (log-scaling and feature selection) made a large impact (example below):
+![image](https://github.com/user-attachments/assets/e8470493-62ce-4470-b675-dd2be21ab698)
+
 - Threshold tuning significantly improved defect recall
 - Class weighting helped balance metrics on imbalanced data
 
