@@ -16,7 +16,7 @@ My approach involved exploring and comparing several machine learning models, in
 - Class balancing
 - Feature transformation (log-scaling + standardization)
 
-My best model (according to Kaggle's scoring metric of AUC)  — Just a Logistic Regression Classifier with class weighting and calibrated preprocessing — while it only achieved **validation accuracy of 75%**, it achieved the best **AUC of 0.79**. My most accurate model, though, achieved a **validation accuracy of 81%**, though it had a slightly lower **AUC of 0.77**. These results represent a solid baseline and demonstrate the importance of preprocessing and class imbalance strategies.
+My best model (according to Kaggle's scoring metric of AUC)  — Just a Logistic Regression Classifier with class weighting and calibrated preprocessing — while it only achieved **validation accuracy of 75%**, it achieved the best **AUC of 0.79**. My most accurate model, a Random Forest Classifier, though, achieved a **validation accuracy of 81%**, though it had a slightly lower **AUC of 0.77**. These results represent a solid baseline and demonstrate the importance of preprocessing and class imbalance strategies.
 
 ---
 
