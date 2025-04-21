@@ -98,7 +98,7 @@ To better understand the underlying structure and separability of the dataset, s
 |------------------------------------------------------|----------|----------|------|
 | Logistic Regression                                  | 75%      | 0.55     | 0.79 |
 | Random Forest (basic)                                | 81%      | 0.46     | 0.77 |
-| Random Forest (tuned attempt with RandomizedSearchCV)| 81%      | 0.45     | 0.79 |
+| Random Forest (tuned attempt with RandomizedSearchCV)| 81%      | 0.52     | 0.79 |
 
 ---
 
