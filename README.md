@@ -44,9 +44,29 @@ My best model — a Random Forest Classifier with class weighting and calibrated
 
 #### Data Visualization
 
-- Histograms for each feature by class (`defects = 0` vs `defects = 1`)
-- Distribution comparison before and after scaling
-- Feature correlation analysis
+To better understand the underlying structure and separability of the dataset, several visualization techniques were applied:
+
+#### Class-Wise Feature Distributions
+
+- For each feature, I plotted histograms comparing the distribution of values for each class (`defects = 0` vs. `defects = 1`).
+- These visualizations revealed that many features were **right-skewed**, and raw values often had poor visual separation between classes.
+- Features like `l`, `branchCount`, `v(g)`, and `total_Opnd` showed **visually distinct distributions** between the classes, especially after transformation, suggesting they may be useful predictors.
+
+#### Distribution Comparison (Before vs. After Scaling)
+
+- Applied **log1p transformation** followed by **standard scaling** to every feature and visualized both the raw and scaled versions side-by-side (example below).
+  ![image](https://github.com/user-attachments/assets/e8470493-62ce-4470-b675-dd2be21ab698)
+- This allowed us to see:
+  - Which features had long-tailed distributions that could obscure class separation.
+  - Whether scaling improved class separability (for example, `uniq_Op`, `total_Op`, and `IOCode` showed clearer differences post-scaling).
+- Even features that initially looked noisy or overlapping (like `IOBlank`, `e`, `t`) were retained temporarily for inspection after transformation, though many of these were ultimately dropped based on post-scaling insights.
+
+#### Why I Chose to Scale
+
+- While tree-based models like Random Forest don’t *require* feature scaling, we scaled anyway to:
+  - Better **visualize class separation**
+  - Maintain **consistency** across models (e.g., Logistic Regression, which is sensitive to scaling)
+- Scaling helped **uncover hidden structure** in features that initially appeared flat or noisy, such as `iv(g)` and `IOComment`.
 
 ---
 
@@ -85,9 +105,7 @@ My best model — a Random Forest Classifier with class weighting and calibrated
 ### Conclusions
 
 - Random Forests performed best with minimal tuning
-- Preprocessing (log-scaling and feature selection) made a large impact (example below):
-![image](https://github.com/user-attachments/assets/e8470493-62ce-4470-b675-dd2be21ab698)
-
+- Preprocessing (log-scaling and feature selection) made a large impact:
 - Threshold tuning significantly improved defect recall
 - Class weighting helped balance metrics on imbalanced data
 
