@@ -8,9 +8,9 @@
 
 ## Overview
 
-The challenge is to build a binary classification model to predict whether a software file contains a defect (`1`) or not (`0`) using a range of numerical features extracted from code complexity and structure.
+This Kaggle challenge is to build a binary classification model to predict whether a software file contains a defect (`1`) or not (`0`) using a range of numerical features extracted from code complexity and structure.
 
-My approach involved exploring and comparing several machine learning models including:
+My approach involved exploring and comparing several machine learning models, including:
 - Logistic Regression (baseline)
 - Random Forest (primary model)
 - Class balancing
