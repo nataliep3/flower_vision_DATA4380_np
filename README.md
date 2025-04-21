@@ -16,7 +16,7 @@ My approach involved exploring and comparing several machine learning models, in
 - Class balancing
 - Feature transformation (log-scaling + standardization)
 
-My best model — a Random Forest Classifier with class weighting and calibrated preprocessing — achieved a **validation accuracy of 81%** and a **log loss of 0.45**. These results represent a solid baseline and demonstrate the importance of preprocessing and class imbalance strategies.
+My best model (according to Kaggle's scoring metric of AUC)  — Just a Logistic Regression Classifier with class weighting and calibrated preprocessing — while it only achieved **validation accuracy of 75%**, it achieved the best **AUC of 0.79**. My most accurate model, though, achieved a **validation accuracy of 81%**, though it had a slightly lower **AUC of 0.77**. These results represent a solid baseline and demonstrate the importance of preprocessing and class imbalance strategies.
 
 ---
 
@@ -94,11 +94,11 @@ To better understand the underlying structure and separability of the dataset, s
 
 ### Performance Comparison
 
-| Model                                                | Accuracy | Log Loss |
-|------------------------------------------------------|----------|----------|
-| Logistic Regression                                  | 75%      | 0.55     |
-| Random Forest (basic)                                | 81%      | 0.46     |
-| Random Forest (tuned attempt with RandomizedSearchCV)| 81%      | 0.45     |
+| Model                                                | Accuracy | Log Loss | AUC  |
+|------------------------------------------------------|----------|----------|------|
+| Logistic Regression                                  | 75%      | 0.55     | 0.79 |
+| Random Forest (basic)                                | 81%      | 0.46     | 0.77 |
+| Random Forest (tuned attempt with RandomizedSearchCV)| 81%      | 0.45     | 0.77 |
 
 ---
 
