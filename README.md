@@ -122,8 +122,6 @@ To better understand the underlying structure and separability of the dataset, s
 
 ## How to reproduce results
 
-### Option 1: Reproduce full pipeline
-
 1. Clone this repository
 2. Install Python packages, `numpy`, `matplotlib`, `scikit-learn`
 3. Run `Kaggle Tabular Data.ipynb` end-to-end
