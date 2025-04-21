@@ -10,17 +10,17 @@
 
 The challenge is to build a binary classification model to predict whether a software file contains a defect (`1`) or not (`0`) using a range of numerical features extracted from code complexity and structure.
 
-Our approach involved exploring and comparing several machine learning models including:
+My approach involved exploring and comparing several machine learning models including:
 - Logistic Regression (baseline)
 - Random Forest (primary model)
 - Class balancing
 - Feature transformation (log-scaling + standardization)
 
-Our best model — a Random Forest Classifier with class weighting and calibrated preprocessing — achieved a **validation accuracy of 81%** and a **log loss of 0.46**. These results represent a solid baseline and demonstrate the importance of preprocessing and class imbalance strategies.
+My best model — a Random Forest Classifier with class weighting and calibrated preprocessing — achieved a **validation accuracy of 81%** and a **log loss of 0.45**. These results represent a solid baseline and demonstrate the importance of preprocessing and class imbalance strategies.
 
 ---
 
-## Summary of Workdone
+## Summary of Work Done
 
 ### Data
 
@@ -37,7 +37,7 @@ Our best model — a Random Forest Classifier with class weighting and calibrate
 
 #### Preprocessing / Clean up
 
-- Dropped clearly uninformative or noisy features (`locCodeAndComment`, `IOBlank`, etc.)
+- Dropped clearly uninformative or noisy features (`locCodeAndComment`, `IOBlank`, `id`, etc.)
 - Applied `np.log1p()` to reduce skewness
 - Standardized features using `StandardScaler`
 - Handled class imbalance using `class_weight='balanced'` and threshold tuning
@@ -74,11 +74,11 @@ Our best model — a Random Forest Classifier with class weighting and calibrate
 
 ### Performance Comparison
 
-| Model                        | Accuracy | Log Loss |
-|------------------------------|----------|----------|
-| Logistic Regression          | 75%      | 0.55     |
-| Random Forest (basic)        | 81%      | 0.46     |
-| Random Forest (tuned attempt)| 81%      | 0.45     |
+| Model                                                | Accuracy | Log Loss |
+|------------------------------------------------------|----------|----------|
+| Logistic Regression                                  | 75%      | 0.55     |
+| Random Forest (basic)                                | 81%      | 0.46     |
+| Random Forest (tuned attempt with RandomizedSearchCV)| 81%      | 0.45     |
 
 ---
 
@@ -95,7 +95,7 @@ Our best model — a Random Forest Classifier with class weighting and calibrate
 
 - Try XGBoost or LightGBM with tuned parameters
 - Use SHAP values for better interpretability
-- Test ensemble of models to improve log loss
+- Test the ensemble of models to improve log loss
 - Explore feature engineering based on domain knowledge
 
 ---
