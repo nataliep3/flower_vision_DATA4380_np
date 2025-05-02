@@ -63,7 +63,10 @@ if args.verbose:
         print("\n")
 
 # Compare models
-modeling.compare_models(list(models.values()), X_val_split, y_val_split)
+if args.verbose:
+    print("Comparing models...")
+    print("-" * 30)
+    modeling.compare_models(list(models.values()), X_val_split, y_val_split)
 
 X_test_final = test_df.drop(columns=["id"])
 submission_ids = test_df["id"]
