@@ -98,7 +98,7 @@ def train_rf_tuned(X_train, y_train, verbose=False):
 
     # Save the best model
     joblib.dump(best_rf_model, os.path.join(models_dir,"best_rf_model.pkl"))
-    
+
     return best_rf_model
 
 
@@ -196,7 +196,7 @@ def compare_models(models, X_val, y_val):
     for m, n in zip(models, names):
         ll = f"{model_log_loss(m, X_val, y_val):.4f}"
         area = f"{model_auc(m, X_val, y_val):.4f}"
-        results.append([n, ll, area])
+        results.append([n, area, ll])
 
     # Print the table
     print(tabulate(results, headers="firstrow", tablefmt="grid"))

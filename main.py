@@ -4,7 +4,6 @@ from src import data_utils, visualization
 from src.feature_engineering import preprocess_features, drop_features
 from src import modeling
 
-ArgumentParser = ArgumentParser()
 # Set up argument parser
 parser = ArgumentParser(description="Train and evaluate models for defect prediction.")
 parser.add_argument("-v","--verbose", action="store_true", help="Enable verbose output.")
