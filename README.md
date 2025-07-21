@@ -1,8 +1,9 @@
 ![](UTA-DataScience-Logo.png)
 
-# Project Title
+# Computer Vision Flower Image Classification
 
-* **One Sentence Summary** This repository outlines an attempt to use transfer learning models to classify images of flowers using the dataset "Flower Images Dataset" on Kaggle, found [here](https://www.kaggle.com/datasets/aksha05/flower-image-dataset)
+This repository outlines an attempt to use transfer learning models to classify images of flowers using the dataset "Flower Images Dataset" on Kaggle, found [here](https://www.kaggle.com/datasets/aksha05/flower-image-dataset)
+
 ## Overview
 
 * This section could contain a short paragraph which include the following:
