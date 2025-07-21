@@ -2,14 +2,11 @@
 
 # Computer Vision Flower Image Classification
 
-This repository outlines an attempt to use transfer learning models to classify images of flowers using the dataset "Flower Images Dataset" on Kaggle, found [here](https://www.kaggle.com/datasets/aksha05/flower-image-dataset)
+This repository outlines an attempt to use transfer learning models to classify images of flowers using the dataset "Flower Images Dataset" on Kaggle, found [here](https://www.kaggle.com/datasets/aksha05/flower-image-dataset).
 
 ## Overview
 
-* This section could contain a short paragraph which include the following:
-  * **Definition of the tasks / challenge**  Ex: The task, as defined by the Kaggle challenge is to use a time series of 12 features, sampled daily for 1 month, to predict the next day's price of a stock.
-  * **Your approach** Ex: The approach in this repository formulates the problem as regression task, using deep recurrent neural networks as the model with the full time series of features as input. We compared the performance of 3 different network architectures.
-  * **Summary of the performance achieved** Ex: Our best model was able to predict the next day stock price within 23%, 90% of the time. At the time of writing, the best performance on Kaggle of this metric is 18%.
+The task, as defined by the Kaggle challenge is to use a set of 733 images of flowers to train a transfer learning model to accurately classify these images into one of 10 possible classes of flowers. In this repository, four models are attempted using three different transfer learning models (MobileNetv2, ResNet101v2, ResNet50) to attempt to achieve the highest non-trivial accuracy scores. The MobileNetv2 model with five total image augmentations achieved the highest validation accuracy score of 0.91, meaning that 91% of the time, the model was able to accurately classify an image of a flower.
 
 ## Summary of Workdone
 
