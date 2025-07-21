@@ -105,3 +105,4 @@ The following image displays the plot of all of the ROC curves for each class fo
   * pandas
   * numpy
 * All packages can be installed using pip command
+* All work was done in a virtual environment to run Python 3.10, specifically
