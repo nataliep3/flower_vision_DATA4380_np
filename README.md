@@ -50,10 +50,19 @@ The image below shows a 3x3 grid of images after being augmented even further (r
 
 * Describe the training:
   * How you trained: software and hardware.
-  * How did training take.
-  * Training curves (loss vs epoch for test/train).
-  * How did you decide to stop training.
-  * Any difficulties? How did you resolve them?
+  * Software: Python 3.10 in a virtual environment, Jupyter Notebook
+  * Hardware: personal Macbook Air
+  * I chose to stop training after 8 epochs for each model because I felt that the results were consistent and did not take too long to run each model
+  * Difficulties: I spent a lot of time reworking my data loading module to make sure the loading and augmentation process were done separately to avoid any repeat augmentations or unwanted results.
+
+The following images are the plotting training curves for each of my four models
+![](images/base_model_plots.png)
+
+![](images/augmentation_model_plots.png)
+
+![](images/resnet101v2_model_plots.png)
+
+![](images/resnet50_model_plots.png)
 
 ### Performance Comparison
 
