@@ -67,70 +67,41 @@ The following images are the plotting training curves for each of my four models
 
 ### Performance Comparison
 
-* Clearly define the key performance metric(s).
-* Show/compare results in one table.
-* Show one (or few) visualization(s) of results, for example ROC curves.
+* Key performance metric: validation accuracy
+
+The image below displays a table showing the metrics of each model
+
+![](images/metrics_table.png)
+
+The following image displays the plot of all of the ROC curves for each class for my second model, the further augmented MobileNetv2 model
+
+![](images/augmented_roc.png)
 
 ### Conclusions
 
-* State any conclusions you can infer from your work. Example: LSTM work better than GRU.
+* Applying multiple reasonable augmentations to the images while using the MobileNetv2 trained from an initial, less augmented dataset, gave a validation accuracy score of 91%, which was the highest validation score between all of the models. I belive having more augmentations helped provide "new" or unseen data to use for training, and I also belive that using one of my own trained models helped. 
 
 ### Future Work
 
-* What would be the next thing that you would try.
-* What are some other studies that can be done starting from here.
-
-## How to reproduce results
-
-* In this section, provide instructions at least one of the following:
-   * Reproduce your results fully, including training.
-   * Apply this package to other data. For example, how to use the model you trained.
-   * Use this package to perform their own study.
-* Also describe what resources to use for this package, if appropirate. For example, point them to Collab and TPUs.
+* I would like to try building on the other two models, ResNet101v2 and ResNet50, and seeing if I can train them further using either more augmentations or new, unseen flower images. I would also like to try to run more epochs for each model, to see if more training will help the scores or if they will neutralize after a certain point.
 
 ### Overview of files in repository
 
-* Describe the directory structure, if any.
-* List all relavent files and describe their role in the package.
-* An example:
-  * utils.py: various functions that are used in cleaning and visualizing data.
-  * preprocess.ipynb: Takes input data in CSV and writes out data frame after cleanup.
-  * visualization.ipynb: Creates various visualizations of the data.
-  * models.py: Contains functions that build the various models.
-  * training-model-1.ipynb: Trains the first model and saves model during training.
-  * training-model-2.ipynb: Trains the second model and saves model during training.
-  * training-model-3.ipynb: Trains the third model and saves model during training.
-  * performance.ipynb: loads multiple trained models and compares results.
-  * inference.ipynb: loads a trained model and applies it to test data to create kaggle submission.
-
-* Note that all of these notebooks should contain enough text for someone to understand what is happening.
+* The initial dataset downloaded from Kaggle does have to be organized into the proper subdirectories for these notebooks to run properly
+* File overview:
+  * data_loader.py: function that loads the image dataset
+  * train_base_model.ipynb: Trains the first model off of augmented images, provides training curves, and saves model
+  * train_base_model_augmentation.ipynb: Trains using the previously saved model (train_base_model.ipynb), plots training curves, and saves model
+  * train_resnet101v2.ipynb: Trains a new model using ResNet101v2, plots training curves, and saves model
+  * train_resnet50.ipynb: Trains a new model using ResNet50, plots training curves, and saves model
+  * comparison_models.ipynb: Takes saved models from previous notebooks and plots ROC curves for all classes for each model
 
 ### Software Setup
-* List all of the required packages.
-* If not standard, provide or point to instruction for installing the packages.
-* Describe how to install your package.
-
-### Data
-
-* Point to where they can download the data.
-* Lead them through preprocessing steps, if necessary.
-
-### Training
-
-* Describe how to train the model
-
-#### Performance Evaluation
-
-* Describe how to run the performance evaluation.
-
-
-## Citations
-
-* Provide any references.
-
-
-
-
-
-
-
+* Required packages:
+  * tensorflow
+  * keras
+  * matplotlib
+  * scikit-learn
+  * pandas
+  * numpy
+* All packages can be installed using pip command
