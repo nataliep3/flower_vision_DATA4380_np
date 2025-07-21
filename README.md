@@ -56,6 +56,7 @@ The image below shows a 3x3 grid of images after being augmented even further (r
   * Difficulties: I spent a lot of time reworking my data loading module to make sure the loading and augmentation process were done separately to avoid any repeat augmentations or unwanted results.
 
 The following images are the plotting training curves for each of my four models
+
 ![](images/base_model_plots.png)
 
 ![](images/augmentation_model_plots.png)
