@@ -32,7 +32,7 @@ The image below displays as 3x3 grid of images after being augmented (randomly f
 
 The image below shows a 3x3 grid of images after being augmented even further (randomly flipped, rotated, zoomed, translated, or adjusted contrast), used for model iterations
 
-![](images/further_augmented_grid.png) 
+![](images/futher_augmented_grid.png) 
 
 ### Problem Formulation
 
