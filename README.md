@@ -10,32 +10,39 @@ The task, as defined by the Kaggle challenge is to use a set of 733 images of fl
 
 ## Summary of Workdone
 
-Include only the sections that are relevant an appropriate.
-
 ### Data
 
 * Data:
   * Type: For example
-    * Input: medical images (1000x1000 pixel jpegs), CSV file: image filename -> diagnosis
-    * Input: CSV file of features, output: signal/background flag in 1st column.
-  * Size: How much data?
-  * Instances (Train, Test, Validation Split): how many data points? Ex: 1000 patients for training, 200 for testing, none for validation
+    * Input: Flower images (244x244 pixel jpegs), image filename -> flower type
+    * Class names: 10 total; tulips, orchids, peonies, hydrangeas, lilies, gardenias, garden roses, daisies, hibiscus, bougainvillea
+  * Size: 733 unique images
+  * Instances (Train, Test, Validation Split): 733 images for use, with 587 images for training and 146 images for validation 
 
 #### Preprocessing / Clean up
 
-* Describe any manipulations you performed to the data.
+* To ensure the directory was organized correctly, I manually sorted the flowers into sub-directories named after each class
+* For ease of training, I created a data loading module to use for each new notebook
 
 #### Data Visualization
 
-Show a few visualization of the data and say a few words about what you see.
+The image below displays as 3x3 grid of images after being augmented (randomly flipped and rotated), used for intial base modeling
+![](image_augmentation.png)
+
+The image below shows a 3x3 grid of images after being augmented even further (randomly flipped, rotated, zoomed, translated, or adjusted contrast), used for model iterations
+![](further_augmented_grid.png)
 
 ### Problem Formulation
 
-* Define:
-  * Input / Output
-  * Models
-    * Describe the different models you tried and why.
-  * Loss, Optimizer, other Hyperparameters.
+* Input: randomly augmented images belonging to one of ten possible classes
+* Output: model metrics to determine model performance
+* Models
+  * MobileNetv2: I worked with this model initially to build off of a provided example and establish a decent baseline set of metrics
+  * ResNet101v2: I chose this model because it had a high accuracy score on the Keras website
+  * ResNet50: I chose this model to work with a different version of ResNet and determine if there are noticable differences in metrics
+* Loss: Sparse categorical cross entropy to handle the multiple class options
+* Optimizer: Adam
+* Metrics: Sparse categorical accuracy
 
 ### Training
 
