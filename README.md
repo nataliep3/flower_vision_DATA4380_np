@@ -27,10 +27,12 @@ The task, as defined by the Kaggle challenge is to use a set of 733 images of fl
 #### Data Visualization
 
 The image below displays as 3x3 grid of images after being augmented (randomly flipped and rotated), used for intial base modeling
-![](image_augmentation.png)
+
+![](image_augmentation.png) 
 
 The image below shows a 3x3 grid of images after being augmented even further (randomly flipped, rotated, zoomed, translated, or adjusted contrast), used for model iterations
-![](further_augmented_grid.png)
+
+![](further_augmented_grid.png) 
 
 ### Problem Formulation
 
